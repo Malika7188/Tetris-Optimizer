@@ -10,7 +10,7 @@ func main() {
 
 	tetrominos := functions.ReadFile()
 	if !functions.Validate(tetrominos) {
-		fmt.Println("Error on validation")
+		fmt.Println("Error")
 		return
 	}
 	tetrominos = functions.TrimTetris(tetrominos)
