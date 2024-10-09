@@ -38,9 +38,10 @@ func countConnection(eachTetro []string) bool {
 			}
 		}
 	}
-	if countConnect < 6 || countC != 4 {
-		return false
-	} else {
-		return true
-	}
+	// if countConnect < 6 || countC != 4 {
+	// 	return false
+	// } else {
+	// 	return true
+	// }
+	return countC == 4 && (countConnect == 6 || countConnect == 8)
 }
