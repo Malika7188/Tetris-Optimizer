@@ -41,7 +41,6 @@ func TestTrimTetris(t *testing.T) {
 				{},
 			},
 		},
-
 	}
 
 	for _, tt := range tests {

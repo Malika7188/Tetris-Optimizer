@@ -25,9 +25,9 @@ func TrimTetris(tetrominos [][]string) [][]string {
 	}
 
 	newTrimedtetro := [][]string{}
-	
+
 	for _, eachTetro := range trimedTetris {
-		hasLetters := make([]bool,4)
+		hasLetters := make([]bool, 4)
 		for j := 0; j < 4; j++ {
 			for i := 0; i < len(eachTetro); i++ {
 				for _, c := range leters {
