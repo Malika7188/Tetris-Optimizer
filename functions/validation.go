@@ -1,6 +1,9 @@
 package functions
 
 func Validate(tetrominos [][]string) bool {
+	if len(tetrominos) > 26 {
+		return false
+	}
 	for _, eachtetro := range tetrominos {
 		if len(eachtetro) != 4 {
 			return false
