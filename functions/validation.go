@@ -5,6 +5,11 @@ func Validate(tetrominos [][]string) bool {
 		if len(eachtetro) != 4 {
 			return false
 		}
+		for _, str := range eachtetro {
+			if len(str) != 4 {
+				return false
+			}
+		}
 		if !countConnection(eachtetro) {
 			return false
 		}
@@ -17,9 +22,6 @@ func countConnection(eachTetro []string) bool {
 	countC := 0
 	countConnect := 0
 	for i, str := range eachTetro {
-		if len(str) != 4 {
-			return false
-		}
 		for j, c := range str {
 			if c != '.' {
 				countC++

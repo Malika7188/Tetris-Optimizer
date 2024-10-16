@@ -8,7 +8,7 @@ import (
 
 func ReadFile() [][]string {
 	if len(os.Args) != 2 {
-		fmt.Println("Error")
+		fmt.Println("ERROR")
 		os.Exit(0)
 	}
 
@@ -16,7 +16,7 @@ func ReadFile() [][]string {
 
 	filename, err := os.ReadFile(args)
 	if err != nil {
-		fmt.Println("Error")
+		fmt.Println("ERROR")
 		os.Exit(0)
 	}
 	tetrominos := [][]string{}
@@ -34,7 +34,7 @@ func ReadFile() [][]string {
 				} else if c == '.' {
 					s += "."
 				} else {
-					fmt.Println("Error")
+					fmt.Println("ERROR")
 					os.Exit(0)
 				}
 			}

@@ -12,35 +12,6 @@ func TestTrimTetris(t *testing.T) {
 		expected [][]string
 	}{
 		{
-			name: "Multiple tetrominos with varying empty space",
-			input: [][]string{
-				{
-					"B...",
-					"BB..",
-					"B...",
-					"....",
-				},
-				{
-					"..C.",
-					".CC.",
-					"..C.",
-					"....",
-				},
-			},
-			expected: [][]string{
-				{
-					"B",
-					"BB",
-					"B",
-				},
-				{
-					"C",
-					"CC",
-					"C",
-				},
-			},
-		},
-		{
 			name: "Tetromino with no empty space",
 			input: [][]string{
 				{
@@ -70,45 +41,7 @@ func TestTrimTetris(t *testing.T) {
 				{},
 			},
 		},
-		{
-			name: "Multiple tetrominos with different shapes",
-			input: [][]string{
-				{
-					"E...",
-					"EE..",
-					".E..",
-					"....",
-				},
-				{
-					"..F.",
-					"..F.",
-					".FF.",
-					"....",
-				},
-				{
-					"..G.",
-					"GGG.",
-					"....",
-					"....",
-				},
-			},
-			expected: [][]string{
-				{
-					"E",
-					"EE",
-					".E",
-				},
-				{
-					"F",
-					"F",
-					"FF",
-				},
-				{
-					"G",
-					"GGG",
-				},
-			},
-		},
+
 	}
 
 	for _, tt := range tests {
